@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel dengan Isian List</title>
+    <style>
+        /* Gaya dasar untuk list box */
+        .custom-list-box {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            background-color: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Tanda panah dropdown */
+        .custom-list-box::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #555;
+        }
+
+        /* Mengubah warna latar belakang saat mouse hover */
+        .custom-list-box:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Gaya dasar untuk tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+
+        /* Gaya untuk baris header tabel */
+        th {
+            background-color: #f4f4f4;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Gaya untuk sel-sel dalam tabel */
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>Kota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><select class="custom-list-box">
+                        <option value="nama1">Nama 1</option>
+                        <option value="nama2">Nama 2</option>
+                        <option value="nama3">Nama 3</option>
+                    </select></td>
+                <td><select class="custom-list-box">
+                        <option value="laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select></td>
+                <td><select class="custom-list-box">
+                        <option value="kota1">Kota 1</option>
+                        <option value="kota2">Kota 2</option>
+                        <option value="kota3">Kota 3</option>
+                    </select></td>
+            </tr>
+            <!-- Tambahkan baris lain sesuai kebutuhan -->
+        </tbody>
+    </table>
+</body>
+</html>
